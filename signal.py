@@ -50,7 +50,6 @@ plt.show()
 
 # wave.write(filename='data/signal/output2.wav')
 
-# spectrum = wave.make_spectrum(full=True)
 
 
 
