@@ -1547,7 +1547,9 @@ class Chirp(Signal):
         freqs = interpolate(ts, self.start, self.end)
 
         # compute the time intervals
-        dts = np.diff(ts, append=ts[-1])
+        # dts = np.diff(ts, append=ts[-1])
+        dts = np.diff(ts)
+        dts = np.append(dts, ts[-1])
 
         # compute the changes in phase
         dphis = PI2 * freqs * dts
