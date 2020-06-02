@@ -39,7 +39,7 @@ wave.plot()
 decorate(xlabel='Time (s)')
 plt.show()
 
-# wave.write(filename='output.wav')
+# wave.write(filename='data/signal/output.wav')
 
 # wave.ys *=2
 # wave.ts +=1
@@ -48,7 +48,7 @@ plt.show()
 # decorate(xlabel='Time (s)')
 # plt.show()
 
-# wave.write(filename='output2.wav')
+# wave.write(filename='data/signal/output2.wav')
 
 # spectrum = wave.make_spectrum(full=True)
 
