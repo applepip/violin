@@ -50,3 +50,34 @@ spectrum_s = wave_s.make_spectrum()
 spectrum_s.plot()
 decorate(xlabel='Frequency (Hz)')
 plt.show()
+
+"""
+混叠:采样高频信号后，结果和采样低频信号一样。
+"""
+
+framerate = 10000
+signal_m = CosSignal(4500)
+duration_m = signal_m.period*5
+segment_m = signal_m.make_wave(duration_m, framerate=framerate)
+segment_m.plot()
+plt.show()
+
+wave_m = signal_m.make_wave(duration=0.5, framerate=10000)
+
+spectrum_m = wave_m.make_spectrum()
+spectrum_m.plot()
+decorate(xlabel='Frequency (Hz)')
+plt.show()
+
+
+signal_m = CosSignal(5500)
+segment_m = signal_m.make_wave(duration_m, framerate=framerate)
+segment_m.plot()
+plt.show()
+
+wave_m = signal_m.make_wave(duration=0.5, framerate=10000)
+
+spectrum_m = wave_m.make_spectrum()
+spectrum_m.plot()
+decorate(xlabel='Frequency (Hz)')
+plt.show()
