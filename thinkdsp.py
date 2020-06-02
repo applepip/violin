@@ -1575,7 +1575,9 @@ class ExpoChirp(Chirp):
         """
         f0, f1 = np.log10(self.start), np.log10(self.end)
         freqs = np.logspace(f0, f1, len(ts))
-        dts = np.diff(ts, prepend=0)
+        # dts = np.diff(ts, prepend=0)
+        dts = np.diff(ts)
+        dts = np.append(dts, ts[-1])
         dphis = PI2 * freqs * dts
         phases = np.cumsum(dphis)
         ys = self.amp * np.cos(phases)
