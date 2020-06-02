@@ -64,3 +64,10 @@ signal = Chirp(start=220, end=440)
 wave = signal.make_wave(duration=1, framerate=11025)
 plot_spectrogram(wave, 512)
 plt.show()
+
+
+"""
+Gabor限制
+频谱图的时间分辨率是片段的长度，对应的是频谱图中各单元的宽度。
+每个片段为512帧，每秒有11025帧，每个片段的长度约为0.046s。
+"""
