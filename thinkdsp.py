@@ -942,6 +942,7 @@ class Wave:
         return Wave(ys, ts, self.framerate)
 
     def make_spectrum(self, full=False):
+
         """Computes the spectrum using FFT.
 
         full: boolean, whethere to compute a full FFT
@@ -950,7 +951,7 @@ class Wave:
         returns: Spectrum
         """
         n = len(self.ys)
-        d = 1 / self.framerate
+        d = 1 / float(self.framerate)
 
         if full:
             hs = np.fft.fft(self.ys)
