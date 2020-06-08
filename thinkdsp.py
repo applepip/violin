@@ -22,12 +22,12 @@ from scipy.io import wavfile
 
 import matplotlib.pyplot as plt
 
-try:
-    from IPython.display import Audio
-except:
-    warnings.warn(
-        "Can't import Audio from IPython.display; " "Wave.make_audio() will not work."
-    )
+# try:
+#     from IPython.display import Audio
+# except:
+#     warnings.warn(
+#         "Can't import Audio from IPython.display; " "Wave.make_audio() will not work."
+#     )
 
 PI2 = math.pi * 2
 
