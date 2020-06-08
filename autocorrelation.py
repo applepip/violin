@@ -135,3 +135,19 @@ for beta in [1.7, 1.0, 0.3]:
 decorate(xlabel='Lag',
          ylabel='Correlation')
 plt.show()
+
+from thinkdsp import read_wave
+
+wave = read_wave('data/autocorrelation/28042__bcjordan__voicedownbew.wav')
+
+spectrum = wave.make_spectrum()
+spectrum.plot()
+decorate(xlabel='Frequency (Hz)', ylabel='Amplitude')
+plt.show()
+
+spectro = wave.make_spectrogram(seg_length=1024)
+spectro.plot(high=4200)
+decorate(xlabel='Time (s)',
+                 ylabel='Frequency (Hz)')
+
+plt.show()
